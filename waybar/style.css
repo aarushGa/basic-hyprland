@@ -1,0 +1,223 @@
+/* --- Global Settings --- */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono Nerd Font";
+    font-weight: bold;
+    font-size: 12px;
+    min-height: 0;
+    outline: none;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+    color: #cdd6f4;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #313244;
+}
+
+/* --- Workspaces (Clean Alpha/Beta icons) --- */
+#workspaces {
+    background: #11111b;
+    border-radius: 12px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: 1px solid #313244;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: #585b70; /* Inactive workspace color */
+    margin-right: 5px;
+    background: transparent;
+    border-radius: 12px;
+}
+
+#workspaces button.active {
+    background: transparent; /* No purple box */
+    color: #cba6f7;           /* Icon turns Lavender when active */
+    text-shadow: 0px 0px 8px rgba(203, 166, 247, 0.7); /* Glow effect */
+}
+
+#workspaces button:hover {
+    background: transparent;
+    color: #bd4bed;
+    text-shadow: none;
+}
+/* --- Center Window --- */
+#window {
+    background: #11111b;
+    color: #89b4fa; /* Sky Blue */
+    border-radius: 12px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 10px;
+    padding: 0px 15px;
+    border: 1px solid #313244;
+    
+}
+
+
+/* --- Right Side Modules --- */
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#bluetooth,
+#tray,
+#power-profiles-daemon,
+#custom-power-menu {
+    background: #11111b;
+    padding: 0px 10px;
+    margin-top: 10px;
+    border: 1px solid #313244;
+}
+
+#clock {
+    color: #cba6f7; /* Lavender */
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+#network {
+    color: #89dceb; /* Sky */
+    border-radius: 10px 0px 0px 10px;
+    border-right: 0px;
+}
+
+#bluetooth {
+    color: #89b4fa; /* Marine Blue */
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+    border-left: 0px;
+} 
+
+#pulseaudio {
+    color: #fab387; /* Peach */
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+#battery {
+    color: #a6e3a1; /* Green */
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+#battery.warning {
+    color: #f9e2af; /* Yellow */
+   
+}
+
+#battery.critical {
+    color: #f38ba8; /* Red */
+    
+} 
+
+#power-profiles-daemon {
+    color: #ffffff;
+    border-radius: 12px;
+    margin-right: 10px;
+    padding-right: 7px;
+    padding-left: 4px;
+    border: 1px solid #333333;
+    margin-top: 10px;
+    background: #000000;
+}
+
+#power-profiles-daemon.performance {
+    color: #d47a7a;
+    border-radius: 12px;
+    margin-right: 10px;
+    padding-right: 9px;
+    padding-left: 8px;
+    border: 1px solid #333333;
+    margin-top: 10px;
+    background: #000000;
+}
+
+#power-profiles-daemon.balanced {
+    color: #ffffff;
+    border-radius: 12px;
+    margin-right: 10px;
+    padding-right: 12px;
+    padding-left: 5px;
+    border: 1px solid #333333;
+    margin-top: 10px;
+    background: #000000;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #82dc8b;
+    border-radius: 12px;
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-left: 6px;
+    border: 1px solid #333333;
+    margin-top: 10px;
+    background: #000000;
+}
+
+#tray {
+    border-radius: 12px;
+    margin-right: 10px;
+    color: #cdd6f4;
+}
+
+#custom-power-menu {
+    color: #f38ba8; /* Red */
+   border-radius: 12px;
+    margin-right: 10px;
+    padding-left: 7px;
+    padding-right: 10px;
+    font-size: 15px
+}
+
+/* --- Hover State Borders --- */
+#clock:hover, #battery:hover, #pulseaudio:hover, #network:hover, #bluetooth:hover, #window:hover, #custom-power-menu:hover {
+    border-color: #585b70;
+}
+
+#cpu,
+#memory,
+#disk {
+    background: #11111b;
+    margin-top: 10px;
+    padding: 0px 10px;
+    border: 1px solid #313244;
+    
+}
+
+#cpu {
+    color: #94e2d5; /* Teal */
+    border-radius: 12px 0px 0px 12px;
+    border-right: 0px;
+    margin-left: 10px;
+}
+
+#memory {
+    color: #cba6f7; /* Lavender */
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#disk {
+    color: #f9e2af; /* Yellow */
+    border-radius: 0px 12px 12px 0px;
+    border-left: 0px;
+    margin-right: 10px;
+}
+
+/* Add these to your existing hover group */
+#cpu:hover, #memory:hover, #disk:hover {
+    border-color: #585b70;
+}

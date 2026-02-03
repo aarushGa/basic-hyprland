@@ -1,0 +1,210 @@
+ /******************************************************************************
+
+ * ROFI Color theme
+
+ * Matches Waybar Dark/Colorful Style
+
+ ******************************************************************************/
+
+
+* {
+
+    /* Font matching your system font */
+
+    font: "JetBrains Mono Nerd Font 12"; 
+
+
+    /* Catppuccin Mocha / Waybar Palette Mapping */
+
+    bg-col:      rgba ( 17, 17, 27, 100 % );    /* Deep Black-Blue #11111b */
+
+    bg-col-light: rgba ( 30, 30, 46, 100 % );   /* Slightly lighter for elements */
+
+    border-col:  rgba ( 202, 166, 247, 100 % ); /* Lavender #cba6f7 */
+
+    selected-col: rgba ( 49, 50, 68, 100 % );   /* Surface #313244 */
+
+    
+
+    blue:        rgba ( 137, 180, 250, 100 % ); /* #89b4fa */
+
+    lavender:    rgba ( 202, 166, 247, 100 % ); /* #cba6f7 */
+
+    fg-col:      rgba ( 205, 214, 244, 100 % ); /* #cdd6f4 */
+
+    red:         rgba ( 243, 139, 168, 100 % ); /* #f38ba8 */
+
+
+    /* Rofi Variable Overrides */
+
+    background-color:            transparent;
+
+    text-color:                  @fg-col;
+
+    
+
+    selected-normal-foreground:  @lavender;
+
+    selected-normal-background:  @selected-col;
+
+    normal-foreground:           @fg-col;
+
+    normal-background:           transparent;
+
+    
+
+    alternate-normal-background: transparent;
+
+    alternate-normal-foreground: @fg-col;
+
+
+    urgent-foreground:           @red;
+
+    urgent-background:           transparent;
+
+    selected-urgent-background:  @red;
+
+    selected-urgent-foreground:  @bg-col;
+
+
+    active-foreground:           @blue;
+
+    active-background:           transparent;
+
+    selected-active-background:  @blue;
+
+    selected-active-foreground:  @bg-col;
+
+
+    spacing:                     0;
+
+    separatorcolor:              transparent;
+
+}
+
+
+window {
+
+    background-color: @bg-col;
+
+    border:           2px;
+
+    border-color:     @lavender; /* Matching the Clock/Workspace color */
+
+    padding:          15; 
+
+    border-radius:    12px;
+
+    width:            20%; 
+
+}
+
+
+mainbox {
+
+    border:  0;
+
+    padding: 0;
+
+}
+
+
+listview {
+
+    fixed-height: 0;
+
+    border:       0px;
+
+    spacing:      5px; 
+
+    scrollbar:    false; 
+
+    padding:      10px 0px 0px;
+
+    lines:        4; 
+
+}
+
+
+element {
+
+    border:         0;
+
+    padding:        8px; 
+
+    border-radius:  8px;
+
+    text-color:     @fg-col;
+
+}
+
+
+element-text {
+
+    background-color: inherit;
+
+    text-color:       inherit;
+
+    vertical-align:   0.5;
+
+}
+
+
+element.selected.normal {
+
+    background-color: @selected-col;
+
+    text-color:       @lavender; /* Highlight text in Lavender */
+
+}
+
+
+element.selected.urgent {
+
+    background-color: @red;
+
+    text-color:       @bg-col;
+
+}
+
+
+element.selected.active {
+
+    background-color: @blue;
+
+    text-color:       @bg-col;
+
+}
+
+
+inputbar {
+
+    spacing:    0;
+
+    text-color: @fg-col;
+
+    padding:    5px;
+
+    children:   [ entry ]; /* Minimalist input */
+
+}
+
+
+entry {
+
+    spacing:    0;
+
+    text-color: @lavender; /* Typing color matches accent */
+
+    placeholder: "Search...";
+
+    placeholder-color: @selected-col;
+
+}
+
+
+/* Cleanup */
+
+prompt { enabled: false; }
+
+textbox-prompt-colon { enabled: false; } 

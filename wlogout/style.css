@@ -1,0 +1,88 @@
+/* general */ 
+* {
+    background-image: none;
+    /* transition handles background-color and the icon zoom */
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    box-shadow: none;
+}
+
+window {
+    /* Set your background image here */
+    background-image: url("/home/aarush/Downloads/wallpapers/Untitled design.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Optional: Add a dark overlay to the grid so buttons stay readable */
+grid {
+    background-color: rgba(4, 2, 37, 0.7); /* Added transparency to see the wallpaper */
+    margin: 100px 500px; 
+    border-radius: 60px; 
+    padding: 20px;
+}
+
+button {
+    color: #FFFFFF;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25%;
+    border: none;
+    outline: none;
+    min-width: 180px;
+    min-height: 180px;
+    margin: 10px;
+}
+
+/* Update the global transition */
+* {
+    background-image: none;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1); /* Smoother "pop" curve */
+    box-shadow: none;
+}
+
+/* ... keep window, grid, and standard button blocks the same ... */
+
+/* The Pop Effect on the icon */
+button:hover {
+    background-color: rgba(79, 5, 122, 0);
+    background-size: 40%; /* Zooms icon from 25% to 40% */
+}
+
+/* Apply the zoom to the specific IDs to ensure it overrides */
+#lock:hover, #logout:hover, #reboot:hover, #shutdown:hover {
+    background-size: 40%;
+}
+/* --- THE FIX: Correcting Corner Directions --- */
+
+/* Top Left - Round the Top-Left corner */
+#lock { 
+    border-radius: 40px 40px 40px 40px; 
+}
+
+/* Top Right - Round the Top-Right corner */
+#logout { 
+    border-radius: 40px 40px 40px 40px; 
+}
+
+/* Bottom Left - Round the Bottom-Left corner */
+#reboot { 
+    border-radius: 40px 40px 40px 40px; 
+}
+
+/* Bottom Right - Round the Bottom-Right corner */
+#shutdown { 
+    border-radius: 40px 40px 40px 40px;
+}
+
+/* Apply the same rounding to hover/focus states */
+#lock:hover, #lock:focus         { border-radius: 40px 40px 40px 40px; }
+#logout:hover, #logout:focus     { border-radius: 40px 40px 40px 40px; }
+#reboot:hover, #reboot:focus     { border-radius: 40px 40px 40px 40px; }
+#shutdown:hover, #shutdown:focus { border-radius: 40px 40px 40px 40px; }
+
+/* Icon Paths */
+#lock { background-image: url("/home/aarush/.config/wlogout/icons/lock_white.png"); }
+#logout { background-image: url("/home/aarush/.config/wlogout/icons/logout_white.png"); }
+#reboot { background-image: url("/home/aarush/.config/wlogout/icons/reboot_white.png"); }
+#shutdown { background-image: url("/home/aarush/.config/wlogout/icons/shutdown_white.png"); }

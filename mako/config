@@ -1,0 +1,31 @@
+# Global Settings
+max-history=100
+sort=-time
+
+# Appearance
+font=monospace 10
+width=300
+height=110
+margin=10
+padding=15
+border-size=2
+border-radius=8
+icons=1
+max-icon-size=64
+
+# Colors (Tokyo Night / Catppuccin style)
+background-color=#1a1b26
+text-color=#c0caf5
+border-color=#7aa2f7
+progress-color=over #333333
+
+# Transparency (Hex + Alpha)
+# background-color=#1a1b26dd
+
+[urgency=high]
+border-color=#f7768e
+default-timeout=0
+
+[urgency=low]
+border-color=#9ece6a
+default-timeout=5000

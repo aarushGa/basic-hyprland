@@ -1,0 +1,19 @@
+window#waybar
+{
+    background: rgba(30, 30, 46, 0.9);
+    border-right: 2px solid #89b4fa;
+    color: #cdd6f4;
+}
+
+/* Target all modules to give them vertical spacing */
+.module {
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(45, 45, 70, 0.5);
+    border-radius: 8px;
+}
+
+/* Specifically target the top-most box if needed */
+box#waybar > box {
+    padding: 20px;
+}

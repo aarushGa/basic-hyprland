@@ -46,6 +46,7 @@ tooltip {
     background: transparent; /* No purple box */
     color: #cba6f7;           /* Icon turns Lavender when active */
     text-shadow: 0px 0px 8px rgba(203, 166, 247, 0.7); /* Glow effect */
+    
 }
 
 #workspaces button:hover {
@@ -53,6 +54,8 @@ tooltip {
     color: #bd4bed;
     text-shadow: none;
 }
+
+
 /* --- Center Window --- */
 #window {
     background: #11111b;
@@ -220,4 +223,15 @@ tooltip {
 /* Add these to your existing hover group */
 #cpu:hover, #memory:hover, #disk:hover {
     border-color: #585b70;
+}
+
+#custom-thunderbird {
+   border-radius: 12px;
+    margin-right: 10px;
+    padding-right: 12px;
+    padding-left: 8px;
+    border: 1px solid #333333;
+    margin-top: 10px;
+    background: #000000;
+    color: #89b4fa;
 }
